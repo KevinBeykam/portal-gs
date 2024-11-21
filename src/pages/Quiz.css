@@ -1,0 +1,27 @@
+.quiz-container {
+    text-align: center;
+    margin: 20px auto;
+    max-width: 600px;
+  }
+  
+  .question-section h2 {
+    margin-bottom: 15px;
+  }
+  
+  .options-section button {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    border: none;
+    background: #2575fc;
+    color: white;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .options-section button:hover {
+    background: #6a11cb;
+  }
+  
