@@ -1,31 +1,25 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Login.css';
 
 function Login() {
-  const [email, setEmail] = useState('');
+  const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
   const navigate = useNavigate();
 
-  useEffect(() => {
-    
-    if (localStorage.getItem('isLoggedIn') === 'true') {
-      navigate('/home');
-    }
-  }, [navigate]);
-
   const handleLogin = (e) => {
     e.preventDefault();
 
-   
-    if (email.trim() === 'admin' && password.trim() === '12345') {
-      
-      localStorage.setItem('isLoggedIn', 'true');
+    // Verificando as credenciais
+    if (username.trim() === 'admin' && password.trim() === '12345') {
+      alert('Login bem-sucedido!');
       setErrorMessage('');
-      navigate('/home'); 
+
+      // Redireciona para a página Home após login bem-sucedido
+      navigate('/home');
     } else {
-      setErrorMessage('E-mail ou senha incorretos.');
+      setErrorMessage('Usuário ou senha incorretos.');
     }
   };
 
@@ -35,13 +29,13 @@ function Login() {
         <h1 className="login-title">Bem-vindo de volta!</h1>
         <form onSubmit={handleLogin}>
           <div className="form-group">
-            <label htmlFor="email">E-mail</label>
+            <label htmlFor="username">Usuário</label>
             <input
               type="text"
-              id="email"
-              placeholder="Digite seu e-mail"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              id="username"
+              placeholder="Digite seu usuário"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
             />
           </div>
           <div className="form-group">
@@ -56,9 +50,6 @@ function Login() {
           </div>
           <button type="submit" className="login-button">Entrar</button>
           {errorMessage && <p className="error-message">{errorMessage}</p>}
-          <p className="signup-text">
-            Não tem uma conta? <a href="#">Cadastre-se</a>
-          </p>
         </form>
       </div>
     </div>
