@@ -6,32 +6,66 @@ const QuizImages = () => {
   const navigate = useNavigate();
   const questions = [
     {
-      question: "Qual animal é conhecido como o rei da selva?",
+      question: "Qual estado brasileiro possui a energia mais sustentável?",
       images: [
-        { src: "/images/tiger.jpg", alt: "Tigre" },
-        { src: "/images/lion.jpg", alt: "Leão" },
-        { src: "/images/elephant.jpg", alt: "Elefante" },
-        { src: "/images/cheetah.jpg", alt: "Guepardo" },
+        { src: "/images/rio-grande-do-norte.jpg", alt: "Rio Grande do Norte" },
+        { src: "/images/rio-grande-do-sul.jpg", alt: "Rio Grande do Sul" },
+        { src: "/images/acre.jpg", alt: "Acre" },
+        { src: "/images/mato-grosso-do-sul.jpg", alt: "Mato Grosso do Sul" },
       ],
-      answer: 1,
+      answer: 0,
     },
     {
-      question: "Qual dessas frutas é uma maçã?",
+      question: "O que é energia de biomassa?",
       images: [
-        { src: "/images/orange.jpg", alt: "Laranja" },
-        { src: "/images/banana.jpg", alt: "Banana" },
-        { src: "/images/apple.jpg", alt: "Maçã" },
-        { src: "/images/grape.jpg", alt: "Uva" },
+        { src: "/images/biomassa.jpg", alt: "Biomassa" },
+        { src: "/images/eol.jpg", alt: "Eolica" },
+        { src: "/images/solar.jpg", alt: "Solar" },
+        { src: "/images/us.jpg", alt: "Usina" },
+      ],
+      answer: 0,
+    },
+    {
+      question: "O que caracteriza uma usina hidrelétrica?",
+      images: [
+        
+        { src: "/images/errada1.jpg", alt: "Errada1" },
+        { src: "/images/errada2.jpg", alt: "Errada2" },
+        { src: "/images/fab.jpg", alt: "fab" },
+        { src: "/images/correta.jpg", alt: "Correta" },
+      ],
+      answer: 3,
+    },
+    {
+      question: "Como a energia solar contribui para a preservação ambiental? ",
+      images: [
+        
+        { src: "/images/carro.jpg", alt: "Errada1" },
+        { src: "/images/fab2.jpg", alt: "Errada2" },
+        { src: "/images/casa.jpg", alt: "correta" },
+       
       ],
       answer: 2,
     },
     {
-      question: "Qual planeta é conhecido como o planeta vermelho?",
+      question: "Qual principal desafio para obter carros elétricos? ",
       images: [
-        { src: "/images/venus.jpg", alt: "Vênus" },
-        { src: "/images/earth.jpg", alt: "Terra" },
-        { src: "/images/mars.jpg", alt: "Marte" },
-        { src: "/images/jupiter.jpg", alt: "Júpiter" },
+        
+        { src: "/images/recarga.jpg", alt: "correta" },
+        { src: "/images/2.jpg", alt: "Errada2" },
+        { src: "/images/fabrica.jpg", alt: "errada" },
+       
+      ],
+      answer: 0,
+    },
+    {
+      question: "Como a energia sustentável pode impulsionar a economia local e global?",
+      images: [
+        
+        { src: "/images/grafico.jpg", alt: "errada" },
+        { src: "/images/reci.jpg", alt: "errada" },
+        { src: "/images/pain.jpg", alt: "correta" },
+       
       ],
       answer: 2,
     },
