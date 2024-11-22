@@ -6,20 +6,25 @@ function Login() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
+  const [successMessage, setSuccessMessage] = useState('');
   const navigate = useNavigate();
 
   const handleLogin = (e) => {
     e.preventDefault();
 
-    // Verificando as credenciais
+   
     if (username.trim() === 'admin' && password.trim() === '12345') {
-      alert('Login bem-sucedido!');
+      setSuccessMessage('Login bem-sucedido!');
       setErrorMessage('');
 
-      // Redireciona para a página Home após login bem-sucedido
-      navigate('/home');
+      
+      setTimeout(() => {
+        setSuccessMessage('');
+        navigate('/home');
+      }, 3000);
     } else {
       setErrorMessage('Usuário ou senha incorretos.');
+      setSuccessMessage('');
     }
   };
 
@@ -49,8 +54,9 @@ function Login() {
             />
           </div>
           <button type="submit" className="login-button">Entrar</button>
-          {errorMessage && <p className="error-message">{errorMessage}</p>}
         </form>
+        {successMessage && <p className="success-message">{successMessage}</p>}
+        {errorMessage && <p className="error-message">{errorMessage}</p>}
       </div>
     </div>
   );
